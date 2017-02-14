@@ -5,24 +5,17 @@ namespace CoinApp.Objects
 {
   public class Coin
   {
-    private int _change;
-
-    public Coin(int change)
+    public Coin()
     {
-      _change = change;
-    }
 
-    public int GetChange()
-    {
-      return _change;
     }
 
     public Dictionary<string, int> Change(int money)
     {
       int quarters = 0;
       int dimes = 0;
-      int pennies = 0;
       int nickles = 0;
+      int pennies = 0;
 
       Dictionary<string, int> changeAmount = new Dictionary<string, int>();
       quarters = money / 25;

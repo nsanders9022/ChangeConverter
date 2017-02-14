@@ -1,0 +1,18 @@
+<h1>Change Calculator</h1>
+
+<form action="/result" method="post">
+  <label for="amount">Enter change amount:</label>
+  <input id="amount" name="amount" type="text">
+  <button type="submit" name="button">Get change</button>
+</form>
+
+@if(Model != null)
+{
+
+<h1>Here is your change</h1>
+<p> Quarters: @Model["quarters"]</p>
+<p> Dimes: @Model["dimes"]</p>
+<p> Nickels: @Model["nickles"]</p>
+<p> Pennies: @Model["pennies"]</p>
+
+}

@@ -12,7 +12,7 @@ namespace CoinApp
     {
       // arrange\
       int testChange = 25;
-      Coin testCoin = new Coin(testChange);
+      Coin testCoin = new Coin();
 
       // act
       Dictionary<string, int> result = testCoin.Change(testChange);
@@ -32,7 +32,7 @@ namespace CoinApp
     {
       // arrange\
       int testChange = 50;
-      Coin testCoin = new Coin(testChange);
+      Coin testCoin = new Coin();
 
       // act
       Dictionary<string, int> result = testCoin.Change(testChange);
@@ -52,7 +52,7 @@ namespace CoinApp
     {
       // arrange\
       int testChange = 35;
-      Coin testCoin = new Coin(testChange);
+      Coin testCoin = new Coin();
 
       // act
       Dictionary<string, int> result = testCoin.Change(testChange);
