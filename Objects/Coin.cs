@@ -5,39 +5,39 @@ namespace CoinApp.Objects
 {
   public class Coin
   {
-    private double _change;
+    private int _change;
 
     public Coin(int change)
     {
       _change = change;
     }
 
-    public double GetChange()
+    public int GetChange()
     {
       return _change;
     }
 
-    public Dictionary<int, string> Change(double money)
+    public Dictionary<string, int> Change(int money)
     {
       int quarters = 0;
       int dimes = 0;
       int pennies = 0;
       int nickles = 0;
 
-      Dictionary<int, string> changeAmount = new Dictionary<int, string>();
-      quarters = (int) (money / .25);
-      money -= (int) (quarters * .25);
-      dimes = (int) (money / .10);
-      money -= (int) (dimes * .10);
-      nickles = (int) (money / .05);
-      money -= (int) (nickles * .05);
-      pennies = (int) (money / .01);
-      money -= (int) (pennies * .01);
+      Dictionary<string, int> changeAmount = new Dictionary<string, int>();
+      quarters = money / 25;
+      money -= quarters * 25;
+      dimes = money / 10;
+      money -= dimes * 10;
+      nickles = money / 5;
+      money -= nickles * 5;
+      pennies = money / 1;
+      money -= pennies * 1;
 
-      changeAmount.Add(quarters, "quarters");
-      changeAmount.Add(dimes, "dimes");
-      changeAmount.Add(nickles, "nickles");
-      changeAmount.Add(pennies, "pennies");
+      changeAmount.Add("quarters", quarters);
+      changeAmount.Add("dimes", dimes);
+      changeAmount.Add("nickles", nickles);
+      changeAmount.Add("pennies", pennies);
 
       return changeAmount;
 
